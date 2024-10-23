@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation - DayDreamersAI</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/docs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="icon" href="./images/image.png">
@@ -16,11 +15,39 @@
     <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-    
-    <!-- React Dependencies -->
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="./js/main.js"></script>
+    <style>
+        .docs-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+        .docs-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .docs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        }
+        .method-badge {
+            background: #002e5f;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        .endpoint-url {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -42,82 +69,89 @@
         </nav>
     </header>
 
-    <!-- Documentation Section -->
-    <section id="docs-header" class="home">
-        <h1>Documentation</h1>
-        <h2>DayDreamersAI API & Models</h2>
+    <!-- Documentation Header -->
+    <section id="home" class="home">
+        <h1>API Documentation</h1>
+        <h2>DayDreamersAI</h2>
         <div class="wave wave1"></div>
         <div class="wave wave2"></div>
         <div class="wave wave3"></div>
     </section>
 
-    <!-- React Root -->
-    <div id="docs-root"></div>
+    <!-- Documentation Content -->
+    <section class="docs-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="heading">AI Models</h2>
+                </div>
+            </div>
+            
+            <!-- Models Section -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="docs-card">
+                        <h3>Generative AI Model</h3>
+                        <p>Custom AI development services with coding architectures in Reinforcement learning and LLM field in pytorch.</p>
+                        <h4>Capabilities:</h4>
+                        <ul>
+                            <li>LLM Training and Fine-tuning</li>
+                            <li>Custom Model Development</li>
+                            <li>Performance Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="docs-card">
+                        <h3>Chatbot Solution</h3>
+                        <p>Multi-Modal chatbot Solutions with RAG pipeline running on your own company data.</p>
+                        <h4>Capabilities:</h4>
+                        <ul>
+                            <li>Custom Data Integration</li>
+                            <li>Multi-language Support</li>
+                            <li>Context Awareness</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- API Documentation -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h2 class="heading">API Reference</h2>
+                </div>
+                <div class="col-12">
+                    <div class="docs-card">
+                        <span class="method-badge">POST</span>
+                        <span class="endpoint-url">/api/v1/generate</span>
+                        <p class="mt-3">Generate responses using our fine-tuned models</p>
+                        <h4>Parameters:</h4>
+                        <ul>
+                            <li><strong>prompt</strong> (string): Input text prompt</li>
+                            <li><strong>max_tokens</strong> (integer): Maximum response length</li>
+                            <li><strong>temperature</strong> (float): Response randomness (0-1)</li>
+                        </ul>
+                    </div>
+
+                    <div class="docs-card">
+                        <span class="method-badge">POST</span>
+                        <span class="endpoint-url">/api/v1/train</span>
+                        <p class="mt-3">Fine-tune models on custom data</p>
+                        <h4>Parameters:</h4>
+                        <ul>
+                            <li><strong>training_data</strong> (array): Array of training examples</li>
+                            <li><strong>epochs</strong> (integer): Number of training epochs</li>
+                            <li><strong>model_type</strong> (string): Base model to fine-tune</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <div class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>About Us</h4>
-                        <ul>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#home">Home</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#about">About us</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#service">Our services</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="#">Terms & condition</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="#">Privacy policy</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
-                        <ul>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#portfolio">Portfolio</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#team">Team</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="careers.html">Career</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#contact">Contact</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#faq">FAQ</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-contact" style="font-size: 1.5rem;">
-                        <h4>Contact Us</h4>
-                        <p>
-                            Aundh<br>
-                            Pune<br>
-                            India <br>
-                            <strong>Phone:</strong> +91-8793678210<br>
-                            <strong>Email:</strong> daydreamersai.agi@gmail.com<br>
-                        </p>
-
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/"><i class="ion-logo-facebook"></i></a>
-                            <a href="https://twitter.com/login?lang=en"><i class="ion-logo-twitter"></i></a>
-                            <a href="https://www.linkedin.com/"><i class="ion-logo-linkedin"></i></a>
-                            <a href="https://www.instagram.com/"><i class="ion-logo-instagram"></i></a>
-                            <a href="https://accounts.google.com/servicelogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="ion-logo-googleplus"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-newsletter">
-                        <h4>Subscription</h4>
-                        <p>With Our Skills Put Together, You Get An Ensemble Capable Of Doing Anything And Everything Your Brand Needs. Subscribe Here To Get Our Latest Updates.</p>
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 copyright" style="color: #fff; font-size: 1.3rem;">
-                    Copyright &copy; 2024 DayDreamersAI Website. All Rights Reserved.
-                </div>
-            </div>
-        </div>
+        <!-- Copy your existing footer here -->
     </div>
 
     <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
@@ -131,16 +165,5 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="js/main.js"></script>
-    
-    <!-- Documentation Component -->
-    <script type="text/babel" src="components/DocsWebsite.jsx"></script>
-    <script type="text/babel">
-        ReactDOM.render(
-            <DocsWebsite />,
-            document.getElementById('docs-root')
-        );
-    </script>
-    <script src="js/docs.js"></script>
 </body>
 </html>
