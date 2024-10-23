@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - DayDreamersAI</title>
+    
+    <!-- Existing CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/careers.css">
+    <!-- New Documentation CSS -->
+    <link rel="stylesheet" href="css/docs.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- React and Dependencies -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <a href="#" class="logo"><img src="./images/image.png"></a>
+        <div class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html#home">home</a></li>
+                <li><a href="index.html#about">about</a></li>
+                <li><a href="index.html#service">services</a></li>
+                <li><a href="index.html#portfolio">portfolio</a></li>
+                <li><a href="index.html#team">team</a></li>
+                <li><a href="careers.html">career</a></li>
+                <li><a href="docs.html">docs</a></li>
+                <li><a href="index.html#contact">contact</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Documentation React Root -->
+    <div id="docs-root"></div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <!-- Copy your existing footer code here -->
+    </footer>
+
+    <!-- Existing Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Documentation Component -->
+    <script type="text/babel" src="components/DocsWebsite.jsx"></script>
+    <script type="text/babel">
+        ReactDOM.render(
+            <DocsWebsite />,
+            document.getElementById('docs-root')
+        );
+    </script>
+    <script src="js/docs.js"></script>
+</body>
+</html>

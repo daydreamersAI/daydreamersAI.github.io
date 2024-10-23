@@ -1,0 +1,62 @@
+/* Documentation Specific Styles */
+#docs-root {
+    padding-top: 80px; /* Adjust based on your header height */
+    min-height: calc(100vh - 80px);
+}
+
+/* Header Background for Documentation Page */
+.header {
+    background: #002e5f;
+    box-shadow: 0 .2rem .5rem rgba(0,0,0,.4);
+}
+
+/* Documentation Cards */
+.docs-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.07);
+    margin-bottom: 30px;
+    border: 5px solid rgba(0,0,0,0.07);
+    transition: all 0.5s ease 0s;
+}
+
+.docs-card:hover {
+    background: #c8d8e4;
+    box-shadow: 0 8px 20px 0 rgba(0,0,0,0.2);
+}
+
+/* Documentation Tabs */
+.docs-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.docs-tab {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.docs-tab.active {
+    border-bottom-color: #00bfff;
+    color: #00bfff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1000px) {
+    #docs-root {
+        padding-top: 60px;
+    }
+    
+    .docs-tabs {
+        flex-direction: column;
+    }
+    
+    .docs-card {
+        margin: 1rem;
+    }
+}
